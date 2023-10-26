@@ -18,3 +18,8 @@ The path of the consumed licenses CSV.
 
 .PARAMETER Organization
 The name of the organization to invite members to.
+
+.PARAMETER PAT
+The personal access token. It must have "admin:org" scope to be authorized for the operation.
+
+#>
