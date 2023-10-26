@@ -36,3 +36,7 @@ Import-Csv $LicensesFile | ForEach-Object {
     Write-Host "---------------------------------------------"
 
     $Body = @{}
+    if ($_."Handle or email" -Match "@") {
+        Write-Host "Inviting email $($_."Handle or email")..."
+        $Body.email = $_."Handle or email"
+    } else {
