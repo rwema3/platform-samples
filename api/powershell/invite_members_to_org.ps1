@@ -40,3 +40,6 @@ Import-Csv $LicensesFile | ForEach-Object {
         Write-Host "Inviting email $($_."Handle or email")..."
         $Body.email = $_."Handle or email"
     } else {
+        Write-Host "Inviting handle $($_."Handle or email")..."
+        $HandleIdRequest = Invoke-RestMethod -SkipHttpErrorCheck -Uri "https://api.github.com/users/$($_."Handle or email")"
+        if ($null -ne $HandleIdRequest.id) {
