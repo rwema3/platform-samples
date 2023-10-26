@@ -13,3 +13,8 @@ Enterprise settings > Enterprise licensing page. Users with appropriate permissi
 the CSV file, edit it in their favorite spreadsheet to select emails to invite, then use this
 script to invite them to an org.
 
+.PARAMETER LicensesFile
+The path of the consumed licenses CSV.
+
+.PARAMETER Organization
+The name of the organization to invite members to.
