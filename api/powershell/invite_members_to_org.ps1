@@ -43,3 +43,5 @@ Import-Csv $LicensesFile | ForEach-Object {
         Write-Host "Inviting handle $($_."Handle or email")..."
         $HandleIdRequest = Invoke-RestMethod -SkipHttpErrorCheck -Uri "https://api.github.com/users/$($_."Handle or email")"
         if ($null -ne $HandleIdRequest.id) {
+            Write-Host "> Handle id is $($HandleIdRequest.id)" -ForegroundColor 'green'
+        } else {
