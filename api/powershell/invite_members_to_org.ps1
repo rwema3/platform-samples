@@ -30,3 +30,9 @@ param (
   [string] [Parameter(Mandatory=$true)] $LicensesFile,
   [string] [Parameter(Mandatory=$true)] $Organization,
   [string] [Parameter(Mandatory=$true)] $PAT
+)
+
+Import-Csv $LicensesFile | ForEach-Object {
+    Write-Host "---------------------------------------------"
+
+    $Body = @{}
