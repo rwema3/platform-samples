@@ -63,3 +63,7 @@ Import-Csv $LicensesFile | ForEach-Object {
         Write-Host "> Status code: $($StatusCode)" -ForegroundColor 'red'
         Write-Host "> $($InvitationRequest | ConvertTo-Json)" -ForegroundColor 'red'
     }
+}
+
+Write-Host "---------------------------------------------"
+Write-Host "End of file"
