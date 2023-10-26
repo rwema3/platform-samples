@@ -45,3 +45,8 @@ Import-Csv $LicensesFile | ForEach-Object {
         if ($null -ne $HandleIdRequest.id) {
             Write-Host "> Handle id is $($HandleIdRequest.id)" -ForegroundColor 'green'
         } else {
+            Write-Host "> Handle id not found" -ForegroundColor 'red'
+        }
+        $Body.invitee_id = $HandleIdRequest.id
+    }
+
