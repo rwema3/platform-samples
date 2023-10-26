@@ -55,3 +55,7 @@ Import-Csv $LicensesFile | ForEach-Object {
         "Authorization" = "token $($PAT)"
     }
 
+    $InvitationRequest = Invoke-RestMethod -StatusCodeVariable "StatusCode" -SkipHttpErrorCheck -Uri "https://api.github.com/orgs/$($Organization)/invitations" -Method Post -Headers $headers -Body ($body | ConvertTo-Json)
+    if ($StatusCode -eq 201) {
+        Write-Host "> Success!" -ForegroundColor 'green'
+    } else {
