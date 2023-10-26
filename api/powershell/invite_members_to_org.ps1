@@ -22,4 +22,6 @@ The name of the organization to invite members to.
 .PARAMETER PAT
 The personal access token. It must have "admin:org" scope to be authorized for the operation.
 
+.EXAMPLE
+.\invite_members_to_org.ps1 -LicensesFile .\consumed_licenses.csv -Organization my-organization -PAT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 #>
