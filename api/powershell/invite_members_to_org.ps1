@@ -50,3 +50,8 @@ Import-Csv $LicensesFile | ForEach-Object {
         $Body.invitee_id = $HandleIdRequest.id
     }
 
+    $headers = @{
+        "Accept" = "application/vnd.github.v3+json"
+        "Authorization" = "token $($PAT)"
+    }
+
