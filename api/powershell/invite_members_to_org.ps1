@@ -59,3 +59,7 @@ Import-Csv $LicensesFile | ForEach-Object {
     if ($StatusCode -eq 201) {
         Write-Host "> Success!" -ForegroundColor 'green'
     } else {
+        Write-Host "> Error!" -ForegroundColor 'red'
+        Write-Host "> Status code: $($StatusCode)" -ForegroundColor 'red'
+        Write-Host "> $($InvitationRequest | ConvertTo-Json)" -ForegroundColor 'red'
+    }
