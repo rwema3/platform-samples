@@ -1,0 +1,18 @@
+query getOrg($orgName:String!) {
+    organization(login: $orgName) {
+        login
+        name
+        membersWithRole(first: 100) {
+            edges {
+                node {
+                    login
+                    location
+                }
+            }
+        }
+    }
+}
+
+variables {
+    "orgName": "ORG_NAME"
+}

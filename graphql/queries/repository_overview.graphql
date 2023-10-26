@@ -1,0 +1,20 @@
+query {
+  repositoryOwner(login: "OWNER_LOGIN") {
+    repository(name: "REPO_NAME") {
+      description
+      hasWikiEnabled
+      issues(states: OPEN) {
+        totalCount
+      }
+      pullRequests(states: OPEN) {
+        totalCount
+      }
+      stargazers {
+        totalCount
+      }
+      forks {
+        totalCount
+      }
+    }
+  }
+}

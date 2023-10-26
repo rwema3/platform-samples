@@ -1,0 +1,18 @@
+query {
+    organization(login: "ORG_NAME") {
+        ...orgFrag
+        repositories {
+            ...repoFrag
+        }
+    }
+}
+
+fragment repoFrag on RepositoryConnection {
+    totalCount
+    totalDiskUsage
+}
+
+fragment orgFrag on Organization{
+    login
+    name
+}
