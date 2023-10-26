@@ -25,3 +25,5 @@ The personal access token. It must have "admin:org" scope to be authorized for t
 .EXAMPLE
 .\invite_members_to_org.ps1 -LicensesFile .\consumed_licenses.csv -Organization my-organization -PAT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 #>
+
+param (
