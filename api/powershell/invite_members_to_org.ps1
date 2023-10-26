@@ -27,3 +27,6 @@ The personal access token. It must have "admin:org" scope to be authorized for t
 #>
 
 param (
+  [string] [Parameter(Mandatory=$true)] $LicensesFile,
+  [string] [Parameter(Mandatory=$true)] $Organization,
+  [string] [Parameter(Mandatory=$true)] $PAT
