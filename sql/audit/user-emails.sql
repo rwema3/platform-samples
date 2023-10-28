@@ -14,3 +14,9 @@ SELECT
 	u.suspended_at
 FROM
 	github_enterprise.users u
+JOIN github_enterprise.user_emails e ON
+	e.user_id = u.id
+WHERE
+	u.gravatar_email != e.email
+	AND e.email not like "%company.com"
+	AND e.email not like "%.tld";
