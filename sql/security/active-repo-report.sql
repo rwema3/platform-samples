@@ -28,3 +28,7 @@ JOIN github_enterprise.users u ON
 WHERE
 	(v.severity = "critical"
 		OR v.severity = "high")
+	AND DATEDIFF(NOW(), r.pushed_at) < 91
+	AND r.parent_id IS NULL
+ORDER BY
+	last_update DESC;
