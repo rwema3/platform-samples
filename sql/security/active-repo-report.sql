@@ -11,3 +11,5 @@ SELECT
 	u.login AS repo_owner,
 	u.type AS owner_type,
 	pushed_at AS last_update,
+	platform,
+	severity,
