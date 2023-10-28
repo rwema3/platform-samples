@@ -18,3 +18,6 @@ JOIN github_enterprise.users u ON
 	h.creator_id = u.id
 JOIN github_enterprise.hookshot_delivery_logs l ON
 	h.id = l.hook_id
+WHERE
+	c.key = 'url'
+	AND h.installation_target_type = 'User'
