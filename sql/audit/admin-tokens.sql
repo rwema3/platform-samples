@@ -17,3 +17,7 @@ FROM
 	github_enterprise.oauth_authorizations z
 JOIN github_enterprise.users u ON
 	z.user_id = u.id
+LEFT JOIN github_enterprise.oauth_applications a ON
+	z.application_id = a.id
+WHERE
+	z.scopes LIKE "%site_admin%"
