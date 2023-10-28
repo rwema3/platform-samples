@@ -7,3 +7,5 @@
  * it will only report root repos.
  */
 SELECT
+	r.name AS repo_name,
+	u.login AS repo_owner,
