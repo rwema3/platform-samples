@@ -14,3 +14,17 @@ SELECT
 	platform,
 	severity,
 	cve_id,
+	ghsa_id,
+	white_source_id,
+	external_reference
+FROM
+	github_enterprise.repository_vulnerability_alerts z
+JOIN github_enterprise.vulnerabilities v ON
+	z.vulnerability_id = v.id
+JOIN github_enterprise.repositories r ON
+	z.repository_id = r.id
+JOIN github_enterprise.users u ON
+	r.owner_id = u.id
+WHERE
+	(v.severity = "critical"
+		OR v.severity = "high")
