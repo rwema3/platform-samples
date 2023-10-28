@@ -13,3 +13,4 @@ SELECT
 	pushed_at AS last_update,
 	platform,
 	severity,
+	cve_id,
