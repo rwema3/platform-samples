@@ -14,3 +14,9 @@ FROM
 	github_enterprise.repository_vulnerability_alerts z
 JOIN github_enterprise.vulnerabilities v ON
 	z.vulnerability_id = v.id
+WHERE
+	v.severity = 'critical'
+GROUP BY
+	v.id
+ORDER BY
+	COUNT(z.vulnerability_id) DESC;
