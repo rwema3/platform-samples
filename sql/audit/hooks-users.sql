@@ -16,3 +16,5 @@ JOIN github_enterprise.hook_config_attributes c ON
 	h.id = c.hook_id
 JOIN github_enterprise.users u ON
 	h.creator_id = u.id
+JOIN github_enterprise.hookshot_delivery_logs l ON
+	h.id = l.hook_id
