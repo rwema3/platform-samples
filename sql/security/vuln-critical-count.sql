@@ -12,3 +12,5 @@ SELECT
 	COUNT(z.vulnerability_id) as repo_count
 FROM
 	github_enterprise.repository_vulnerability_alerts z
+JOIN github_enterprise.vulnerabilities v ON
+	z.vulnerability_id = v.id
