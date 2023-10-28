@@ -12,3 +12,5 @@ SELECT
 	u.login,
 	e.email,
 	u.suspended_at
+FROM
+	github_enterprise.users u
