@@ -10,3 +10,5 @@ SELECT
 	v.external_reference,
 	v.platform as ecosystem,
 	COUNT(z.vulnerability_id) as repo_count
+FROM
+	github_enterprise.repository_vulnerability_alerts z
