@@ -10,3 +10,7 @@ SELECT
 	a.name as app_name,
 	z.accessed_at,
 	z.created_at,
+	z.updated_at,
+	z.description,
+	z.scopes
+FROM
