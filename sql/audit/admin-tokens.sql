@@ -14,3 +14,6 @@ SELECT
 	z.description,
 	z.scopes
 FROM
+	github_enterprise.oauth_authorizations z
+JOIN github_enterprise.users u ON
+	z.user_id = u.id
