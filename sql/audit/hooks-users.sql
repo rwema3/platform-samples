@@ -12,3 +12,5 @@ SELECT
 	MAX(l.delivered_at) as latest_delivery
 FROM
 	github_enterprise.hooks h
+JOIN github_enterprise.hook_config_attributes c ON
+	h.id = c.hook_id
